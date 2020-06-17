@@ -10,17 +10,30 @@ const useStyle = makeStyles((theme) => ({
         color: theme.palette.secondary.dark,
     },
     titleBar: {
-        background: ' linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)',
+        background: '#87c2ff',
         height: '25px',
+        margin: '15px 5px',
+        borderRadius: '10px',
+        padding: '4px 0',
     },
     gridItem: {
-        width: '50% !important',
-        height: '500px !important',
-        padding: '2px !important',
+        boxSizing: 'border-box',
+        width: '30%',
+        height: '500px',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        transition: '0.5s',
+        '&:hover': {
+            width: '33%',
+        },
     },
     image: {
-        height: '100%'
-    }
+        height: '90%',
+        width: '100%',
+        transition: '0.5s',
+
+    },
+
 }));
 
 const ImageItem = (props) => {
@@ -34,7 +47,7 @@ const ImageItem = (props) => {
 
     return (
         <GridListTile key={imageUrlIndex} className={classes.gridItem}>
-            <img src={imageUrl} alt={title} className={classes.image}/>
+            <img src={imageUrl} alt={title} className={classes.image} />
             <GridListTileBar
                 title={title}
                 classes={{
@@ -43,7 +56,7 @@ const ImageItem = (props) => {
                 }}
                 actionIcon={
                     <IconButton aria-label="tick">
-                        <CheckBoxOutlineBlankOutlinedIcon className={classes.title} onClick={onCheck}/>
+                        <CheckBoxOutlineBlankOutlinedIcon className={classes.title} onClick={onCheck} />
                     </IconButton>
                 }
             />

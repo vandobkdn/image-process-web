@@ -1,9 +1,9 @@
 import React from "react";
 import './style.css';
 import GridList from "@material-ui/core/GridList";
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import ImageItem from "./ImageItem";
-import {Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const useStyle = makeStyles((theme) => ({
     root: {
@@ -13,10 +13,11 @@ const useStyle = makeStyles((theme) => ({
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
     },
-    gridList: {
-        flexWrap: 'wrap',
-        transform: 'translateZ(0)',
+
+    icon: {
+        color: 'rgba(255, 255, 255, 0.54)',
     },
+
 }));
 
 function checkImage(imageSrc) {
@@ -24,7 +25,7 @@ function checkImage(imageSrc) {
     try {
         img.src = imageSrc;
         return true;
-    } catch(err) {
+    } catch (err) {
         return false;
     }
 }
@@ -32,13 +33,14 @@ function checkImage(imageSrc) {
 const ImagesContainer = (props) => {
     const classes = useStyle();
     return (
-        <Grid container spacing={5} className={classes.root}>
-            <GridList className={classes.gridList} cols={2.5}>
-                {props.dataFormatted.map((item) => checkImage(item.imageUrl) &&(
+        <div className="leftSide">
+            <GridList cols={4} className={classes.root} >
+                {props.dataFormatted.map((item) => checkImage(item.imageUrl) && (
                     <ImageItem item={item} />
+
                 ))}
             </GridList>
-        </Grid>
+        </div>
     )
 };
 

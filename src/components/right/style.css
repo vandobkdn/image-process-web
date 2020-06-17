@@ -1,26 +1,38 @@
-.Download >label {
+.menuRightSide >label {
     color: black;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
-    text-decoration: underline;
-    left: 20px;
-    position: relative;
+    text-decoration: underline; 
+    padding-left: 16%;
     user-select: none;
 }
 
-.singleLine {
-    border: 0.8px solid black;
+.menuRightSide .singleLine {
+    border: 1px solid black;
     border-radius: 5px;
+    width: 70%;
 }
 
-.Upload >label {
+.Upload >div >label {
     color: black;
     margin-top: 40px;
     margin-bottom: 20px;
     display: flex;
     text-decoration: underline;
-    left: 20px;
-    position: relative;
+    padding-left: 20px;
     user-select: none;
+}
+
+.menuRightSide {
+    background-color: #87c2ff;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+}
+
+.Download, .Upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

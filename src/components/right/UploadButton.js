@@ -11,8 +11,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     input: {
-        display: 'none',
-    },
+        color: 'red',
+        display: 'none'
+    }
 }));
 
 const UploadButton = () => {
@@ -20,7 +21,7 @@ const UploadButton = () => {
 
     return (
         <div className={classes.root}>
-            <input
+            {/* <input
                 accept="image/*"
                 className={classes.input}
                 id="contained-button-file"
@@ -32,6 +33,14 @@ const UploadButton = () => {
                     Upload
                 </Button>
             </label>
+            
+            */}
+             <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
+      <label htmlFor="icon-button-file">
+        <IconButton color="primary" aria-label="upload picture" component="span">
+          <PhotoCamera style={{ fontSize: 150 }}  />
+        </IconButton>
+      </label>
         </div>
     );
 };

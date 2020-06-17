@@ -1,16 +1,37 @@
+
 .Application {
-    min-height: 100vh;
-    background-color: #ccd9ff;
+    /* min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    padding: 10px;
+    padding: 10px; 
+    margin: 20px 20px 20px 0; */
+    margin: 1% 2%;
+    transition: 0.5s;
+    
 }
 
-.Application .RightSide {
-    padding-left: 30px !important;
-    position: fixed;
-    right: 0;
+
+.item1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    width: 100%;
+
 }
+.item2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    right: 30px;
+    height: 100%;
+
+}
+
+

@@ -15,17 +15,8 @@ class App extends React.Component {
   }
   render() {
     return (
-        <div className="App">
-          <Grid container spacing={1}>
-            <Grid container item xs={8} md={9}>
-              <LeftSide />
-            </Grid>
-            <Grid container item xs={4} md={3}>
-              <RightSide entity="consistent" />
-            </Grid>
-
-          </Grid>
-        </div>
+      <div className="App">
+      </div>
     );
   }
 };

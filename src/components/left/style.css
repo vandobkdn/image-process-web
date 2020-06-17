@@ -2,3 +2,17 @@
     display: flex;
     justify-content: center;
 }
+
+
+.gridList {
+    height: 25px;
+    background-color: #ccd9ff;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.leftSide {
+    width: 80%;
+}

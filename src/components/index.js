@@ -24,20 +24,20 @@ class Application extends React.Component {
         timeout = timeout || 5000;
         let timedOut = false, timer;
         const img = new Image();
-        img.onerror = img.onabort = function() {
+        img.onerror = img.onabort = function () {
             if (!timedOut) {
                 clearTimeout(timer);
                 callback(false);
             }
         };
-        img.onload = function() {
+        img.onload = function () {
             if (!timedOut) {
                 clearTimeout(timer);
                 callback(true);
             }
         };
         img.src = url;
-        timer = setTimeout(function() {
+        timer = setTimeout(function () {
             timedOut = true;
             callback(false);
         }, timeout);
@@ -46,13 +46,16 @@ class Application extends React.Component {
     render() {
         return (
             <div className="Application">
-                <Grid container spacing={1}>
-                    <Grid container item xs={8} md={9}>
+                <Grid container spacing={5} className={{ container: 'container' }}>
+                    <Grid item1 xs={10} className={{ item1: 'item1' }}>
                         <ImagesContainer dataFormatted={this.state.dataFormatted} />
                     </Grid>
-                    <Grid container item xs={4} md={3} className="RightSide">
+
+                    <Grid item2 xs={2} className={{ item2: 'item2' }}>
                         <ActionRightSide />
                     </Grid>
+
+
 
                 </Grid>
             </div>
